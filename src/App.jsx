@@ -62,7 +62,7 @@ export default function BasicTabs() {
         <VerticalTabs />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        گزارشگیری
       </TabPanel>
     </Box>
   );

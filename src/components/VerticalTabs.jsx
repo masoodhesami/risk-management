@@ -5,6 +5,7 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import RiskForm from "./RiskForm";
+import { Button, TextField } from "@mui/material";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -74,22 +75,146 @@ export default function VerticalTabs() {
         <RiskForm />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <Box
+          sx={{
+            display: "flex",
+            width: "1000px",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 6,
+          }}
+        >
+          <TextField
+            id="filled-select-currency-native"
+            select
+            label="نوع ریسک"
+            defaultValue="EUR"
+            SelectProps={{
+              native: true,
+            }}
+            helperText="نوع ریسک را از آیتم های بالا انتخاب کنید"
+            variant="filled"
+          >
+            <option value={"مدیریتی"}>مدیریتی</option>
+            <option value={"فنی"}>فنی</option>
+          </TextField>
+          <Button variant="contained" color="success">
+            اضافه کردن
+          </Button>
+        </Box>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <Box
+          sx={{
+            display: "flex",
+            width: "1000px",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 6,
+          }}
+        >
+          <TextField
+            id="filled-select-currency-native"
+            select
+            label="احتمال وقوع ریسک"
+            defaultValue="EUR"
+            SelectProps={{
+              native: true,
+            }}
+            helperText="احتمال وقوع ریسک را از آیتم های بالا انتخاب کنید"
+            variant="filled"
+          >
+            <option value={"کم"}>کم</option>
+            <option value={"متوسط"}>متوسط</option>
+            <option value={"زیاد"}>زیاد</option>
+          </TextField>
+          <Button variant="contained" color="success">
+            اضافه کردن
+          </Button>
+        </Box>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Item Four
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            width: "1000px",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: 6,
+          }}
+        >
+          <TextField
+            id="solution"
+            label="راه حل ریسک را وارد کنید"
+            variant="filled"
+            sx={{ width: "500px" }}
+          />
+          <Button variant="contained" color="success">
+            اضافه کردن
+          </Button>
+        </Box>
       </TabPanel>
       <TabPanel value={value} index={4}>
-        Item Five
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            width: "1000px",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: 6,
+          }}
+        >
+          <TextField
+            id="solution"
+            label=" علت ریسک را وارد کنید"
+            variant="filled"
+            sx={{ width: "500px" }}
+          />
+          <Button variant="contained" color="success">
+            اضافه کردن
+          </Button>
+        </Box>
       </TabPanel>
       <TabPanel value={value} index={5}>
-        Item Six
-      </TabPanel>
-      <TabPanel value={value} index={6}>
-        Item Seven
+        <Box
+          sx={{
+            display: "flex",
+            width: "1000px",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 6,
+          }}
+        >
+          <TextField
+            id="filled-select-currency-native"
+            select
+            label=" اثر یا شدت ریسک"
+            defaultValue="EUR"
+            SelectProps={{
+              native: true,
+            }}
+            helperText=" اثر یا شدت ریسک را از آیتم های بالا انتخاب کنید"
+            variant="filled"
+          >
+            <option value={"بی ارزش"}>بی ارزش</option>
+            <option value={"جدی"}>جدی</option>
+            <option value={"فاجعه برانگیز"}>فاجعه برانگیز</option>
+          </TextField>
+          <TextField
+            id="solution"
+            label=" درصد شدت ریسک را وارد کنید"
+            variant="filled"
+            sx={{ width: "280px" }}
+          />
+          <Button variant="contained" color="success">
+            اضافه کردن
+          </Button>
+        </Box>
       </TabPanel>
     </Box>
   );

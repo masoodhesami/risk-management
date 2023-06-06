@@ -5,6 +5,7 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import VerticalTabs from "./components/VerticalTabs";
+import ReportTable from "./components/ReportTable";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -62,7 +63,7 @@ export default function BasicTabs() {
         <VerticalTabs />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        گزارشگیری
+        <ReportTable />
       </TabPanel>
     </Box>
   );

@@ -1,4 +1,4 @@
-import { Box, TextField } from "@mui/material";
+import { Box, Button, TextField } from "@mui/material";
 
 const RiskForm = () => {
   const currencies = [
@@ -55,8 +55,10 @@ const RiskForm = () => {
     <Box
       sx={{
         display: "flex",
+        flexDirection: "column",
         width: "1000px",
         justifyContent: "center",
+        alignItems: "center",
       }}
     >
       <Box
@@ -87,6 +89,18 @@ const RiskForm = () => {
         </TextField>
         <TextField id="risk" label="کد ریسک" variant="filled" />
         <TextField id="project" label="کد پروژه" variant="filled" />
+      </Box>
+
+      <Box sx={{ display: "flex", gap: 4, mt: 6, justifyContent: "center" }}>
+        <Button variant="contained" color="success">
+          اضافه کردن
+        </Button>
+        <Button variant="contained" color="info">
+          ویرایش
+        </Button>
+        <Button variant="contained" color="error">
+          حذف
+        </Button>
       </Box>
     </Box>
   );
